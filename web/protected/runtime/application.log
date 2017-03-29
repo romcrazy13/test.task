@@ -1,0 +1,1588 @@
+2017/03/28 00:37:53 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /var/www/test.task/web/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /var/www/test.task/web/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /var/www/test.task/web/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /var/www/test.task/web/framework/base/CModule.php(394): CDbConnection->init()
+#3 /var/www/test.task/web/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /var/www/test.task/web/framework/gii/generators/model/ModelCode.php(60): CModule->__get('db')
+#5 /var/www/test.task/web/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /var/www/test.task/web/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /var/www/test.task/web/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/model/index
+HTTP_REFERER=http://test.task/index.php/gii
+---
+2017/03/28 12:05:04 [error] [php] include(AjaxController.php): failed to open stream: No such file or directory (/var/www/test.task/web/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/test.task/web/protected/views/letter/_form.php(56): spl_autoload_call()
+#1 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#3 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#4 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#5 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#6 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#7 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#8 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#9 /var/www/test.task/web/protected/controllers/LetterController.php(78): LetterController->render()
+#10 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#11 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#13 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#16 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#19 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#20 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#22 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (56)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (78)
+2017/03/28 12:16:25 [error] [exception.ParseError] ParseError: syntax error, unexpected 'if' (T_IF) in /var/www/test.task/web/protected/controllers/LetterController.php:72
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CWebApplication.php(276): CWebApplication->createController('create/')
+#1 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/create')
+#2 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /var/www/test.task/web/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/index.php?r=letter/create
+HTTP_REFERER=http://test.task/index.php?r=letter/index
+---
+2017/03/28 12:33:47 [error] [exception.CException] CException: Property "Letter.APIkey" is not defined. in /var/www/test.task/web/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/test.task/web/framework/db/ar/CActiveRecord.php(161): CComponent->__set('APIkey', '6x3rpdf8wqhg3ug...')
+#1 /var/www/test.task/web/framework/base/CModel.php(607): CActiveRecord->__set('APIkey', '6x3rpdf8wqhg3ug...')
+#2 /var/www/test.task/web/protected/views/letter/create.php(19): CModel->offsetSet('APIkey', '6x3rpdf8wqhg3ug...')
+#3 /var/www/test.task/web/framework/web/CBaseController.php(126): require('/var/www/test.t...')
+#4 /var/www/test.task/web/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/test.t...', Array, true)
+#5 /var/www/test.task/web/framework/web/CController.php(869): CBaseController->renderFile('/var/www/test.t...', Array, true)
+#6 /var/www/test.task/web/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#7 /var/www/test.task/web/protected/controllers/LetterController.php(78): CController->render('create', Array)
+#8 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#9 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('create')
+#18 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/create')
+#19 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /var/www/test.task/web/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php?r=letter/create
+HTTP_REFERER=http://test.task/index.php?r=letter/index
+---
+2017/03/28 12:35:24 [error] [exception.CException] CException: Property "Letter.APIkey" is not defined. in /var/www/test.task/web/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/test.task/web/framework/db/ar/CActiveRecord.php(161): CComponent->__set('APIkey', '6x3rpdf8wqhg3ug...')
+#1 /var/www/test.task/web/framework/base/CModel.php(607): CActiveRecord->__set('APIkey', '6x3rpdf8wqhg3ug...')
+#2 /var/www/test.task/web/protected/views/letter/create.php(19): CModel->offsetSet('APIkey', '6x3rpdf8wqhg3ug...')
+#3 /var/www/test.task/web/framework/web/CBaseController.php(126): require('/var/www/test.t...')
+#4 /var/www/test.task/web/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/test.t...', Array, true)
+#5 /var/www/test.task/web/framework/web/CController.php(869): CBaseController->renderFile('/var/www/test.t...', Array, true)
+#6 /var/www/test.task/web/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#7 /var/www/test.task/web/protected/controllers/LetterController.php(78): CController->render('create', Array)
+#8 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#9 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('create')
+#18 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/create')
+#19 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /var/www/test.task/web/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php?r=letter/create
+HTTP_REFERER=http://test.task/index.php?r=letter/index
+---
+2017/03/28 13:16:24 [error] [php] var_dump() expects at least 1 parameter, 0 given (/var/www/test.task/web/protected/views/letter/_form.php:59)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#1 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#2 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#4 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#5 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#6 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#7 /var/www/test.task/web/protected/controllers/LetterController.php(79): LetterController->render()
+#8 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#9 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#11 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#14 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#18 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (59)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (79)
+2017/03/28 13:48:28 [error] [php] json_decode() expects parameter 1 to be string, object given (/var/www/test.task/web/protected/controllers/LetterController.php:209)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#1 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#3 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#9 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#10 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/controllers/LetterController.php (209)
+in /var/www/test.task/web/protected/controllers/LetterController.php (79)
+in /var/www/test.task/web/index.php (13)
+2017/03/28 13:49:29 [error] [php] Undefined variable: list (/var/www/test.task/web/protected/views/letter/_form.php:59)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#1 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#5 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#6 /var/www/test.task/web/protected/controllers/LetterController.php(79): LetterController->render()
+#7 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#8 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#10 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#13 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#16 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (59)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (79)
+2017/03/28 13:54:02 [error] [exception.CException] CException: LetterController and its behaviors do not have a method or closure named "set". in /var/www/test.task/web/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(77): CComponent->__call('set', Array)
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('create')
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/create')
+#12 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/test.task/web/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=letter/create
+HTTP_REFERER=http://test.task/index.php?r=site/login
+---
+2017/03/28 13:54:12 [error] [exception.CException] CException: LetterController and its behaviors do not have a method or closure named "set". in /var/www/test.task/web/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(77): CComponent->__call('set', Array)
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('create')
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/create')
+#12 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/test.task/web/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=letter/create
+HTTP_REFERER=http://test.task/
+---
+2017/03/28 13:59:11 [error] [exception.CException] CException: LetterController cannot find the requested view "index". in /var/www/test.task/web/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(135): CController->render('index', Array)
+#2 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionIndex()
+#3 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/test.task/web/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/
+---
+2017/03/28 14:02:07 [error] [exception.CException] CException: LetterController cannot find the requested view "index". in /var/www/test.task/web/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(135): CController->render('index', Array)
+#2 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionIndex()
+#3 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/test.task/web/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/
+---
+2017/03/28 14:16:54 [error] [php] Array to string conversion (/var/www/test.task/web/protected/views/letter/_form.php:63)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#1 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#5 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#6 /var/www/test.task/web/protected/controllers/LetterController.php(82): LetterController->render()
+#7 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#8 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#10 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#13 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#16 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (63)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (82)
+2017/03/28 14:17:56 [error] [php] Array to string conversion (/var/www/test.task/web/protected/views/letter/_form.php:63)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#1 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#5 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#6 /var/www/test.task/web/protected/controllers/LetterController.php(82): LetterController->render()
+#7 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#8 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#10 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#13 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#16 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (63)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (82)
+2017/03/28 14:32:29 [error] [php] json_decode() expects parameter 1 to be string, object given (/var/www/test.task/web/protected/views/letter/_form.php:62)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#1 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#2 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#4 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#5 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#6 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#7 /var/www/test.task/web/protected/controllers/LetterController.php(82): LetterController->render()
+#8 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#9 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#11 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#14 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#18 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (62)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (82)
+2017/03/28 14:37:32 [error] [php] json_decode() expects parameter 1 to be string, object given (/var/www/test.task/web/protected/views/letter/_form.php:62)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#1 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#2 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#4 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#5 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#6 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#7 /var/www/test.task/web/protected/controllers/LetterController.php(82): LetterController->render()
+#8 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#9 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#11 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#14 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#18 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (62)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (82)
+2017/03/28 14:59:27 [error] [php] Invalid argument supplied for foreach() (/var/www/test.task/web/protected/views/letter/_form.php:62)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#1 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#5 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#6 /var/www/test.task/web/protected/controllers/LetterController.php(80): LetterController->render()
+#7 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#8 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#10 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#13 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#16 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (62)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (80)
+2017/03/28 15:20:45 [error] [php] Array to string conversion (/var/www/test.task/web/protected/views/letter/_form.php:63)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#1 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#5 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#6 /var/www/test.task/web/protected/controllers/LetterController.php(81): LetterController->render()
+#7 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#8 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#10 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#13 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#16 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (63)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (81)
+2017/03/28 15:22:35 [error] [php] Array to string conversion (/var/www/test.task/web/protected/views/letter/_form.php:63)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#1 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#5 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#6 /var/www/test.task/web/protected/controllers/LetterController.php(81): LetterController->render()
+#7 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#8 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#10 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#13 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#16 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (63)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (81)
+2017/03/28 15:24:52 [error] [exception.ParseError] ParseError: syntax error, unexpected '}', expecting end of file in /var/www/test.task/web/protected/views/letter/_form.php:66
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/test.t...', Array, true)
+#1 /var/www/test.task/web/framework/web/CController.php(869): CBaseController->renderFile('/var/www/test.t...', Array, true)
+#2 /var/www/test.task/web/protected/views/letter/create.php(20): CController->renderPartial('_form', Array)
+#3 /var/www/test.task/web/framework/web/CBaseController.php(126): require('/var/www/test.t...')
+#4 /var/www/test.task/web/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/test.t...', Array, true)
+#5 /var/www/test.task/web/framework/web/CController.php(869): CBaseController->renderFile('/var/www/test.t...', Array, true)
+#6 /var/www/test.task/web/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#7 /var/www/test.task/web/protected/controllers/LetterController.php(81): CController->render('create', Array)
+#8 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#9 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('create')
+#18 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/create')
+#19 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /var/www/test.task/web/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php?r=letter/create
+HTTP_REFERER=http://test.task/
+---
+2017/03/28 15:31:46 [error] [php] Trying to get property of non-object (/var/www/test.task/web/protected/views/letter/_form.php:62)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#1 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#2 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#3 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#5 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#6 /var/www/test.task/web/protected/controllers/LetterController.php(82): LetterController->render()
+#7 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#8 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#10 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#13 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#16 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#17 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (62)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (82)
+2017/03/28 16:02:29 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/var/www/test.task/web/framework/web/helpers/CHtml.php:108)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/helpers/CHtml.php(163): renderAttributes()
+#1 /var/www/test.task/web/framework/web/helpers/CHtml.php(1835): tag()
+#2 /var/www/test.task/web/framework/web/widgets/CActiveForm.php(853): activeTextArea()
+#3 /var/www/test.task/web/protected/views/letter/_form.php(65): CActiveForm->textArea()
+#4 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#5 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#6 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#7 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#8 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#9 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#10 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#11 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#12 /var/www/test.task/web/protected/controllers/LetterController.php(82): LetterController->render()
+#13 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#14 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#16 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#18 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#19 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#20 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#22 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#23 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#24 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#25 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (65)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (82)
+2017/03/28 16:03:03 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/var/www/test.task/web/framework/web/helpers/CHtml.php:108)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/helpers/CHtml.php(163): renderAttributes()
+#1 /var/www/test.task/web/framework/web/helpers/CHtml.php(1835): tag()
+#2 /var/www/test.task/web/framework/web/widgets/CActiveForm.php(853): activeTextArea()
+#3 /var/www/test.task/web/protected/views/letter/_form.php(65): CActiveForm->textArea()
+#4 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#5 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#6 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#7 /var/www/test.task/web/protected/views/letter/create.php(20): LetterController->renderPartial()
+#8 /var/www/test.task/web/framework/web/CBaseController.php(126): require()
+#9 /var/www/test.task/web/framework/web/CBaseController.php(95): LetterController->renderInternal()
+#10 /var/www/test.task/web/framework/web/CController.php(869): LetterController->renderFile()
+#11 /var/www/test.task/web/framework/web/CController.php(782): LetterController->renderPartial()
+#12 /var/www/test.task/web/protected/controllers/LetterController.php(82): LetterController->render()
+#13 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): LetterController->actionCreate()
+#14 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#16 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#18 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#19 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#20 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#22 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#23 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#24 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#25 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/create
+in /var/www/test.task/web/protected/views/letter/_form.php (65)
+in /var/www/test.task/web/protected/views/letter/create.php (20)
+in /var/www/test.task/web/protected/controllers/LetterController.php (82)
+2017/03/29 00:56:25 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "index". in /var/www/test.task/web/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax')
+#3 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/test.task/web/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=ajax
+---
+2017/03/29 01:42:14 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "send". in /var/www/test.task/web/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(270): CController->missingAction('send')
+#1 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#2 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#3 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/test.task/web/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=letter/send
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 01:43:50 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/test.task/web/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#8 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#9 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/test.task/web/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=letter/send
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 01:45:24 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/test.task/web/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#8 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#9 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/test.task/web/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=letter/send
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 01:45:52 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/test.task/web/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#8 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#9 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/test.task/web/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 01:47:01 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/test.task/web/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/test.task/web/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#8 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#9 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/test.task/web/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 01:58:05 [error] [exception.CException] CException: Property "LetterController.id" is read only. in /var/www/test.task/web/framework/base/CComponent.php:170
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(56): CComponent->__set('id', '6')
+#1 [internal function]: LetterController->actionView('6')
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/view')
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=letter/view&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/index
+---
+2017/03/29 01:58:30 [error] [php] include(AjaxController.php): failed to open stream: No such file or directory (/var/www/test.task/web/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(64): spl_autoload_call()
+#1 unknown(0): LetterController->actionSend()
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=6
+in /var/www/test.task/web/protected/controllers/LetterController.php (64)
+in /var/www/test.task/web/index.php (13)
+2017/03/29 02:00:00 [error] [php] include(AjaxController.php): failed to open stream: No such file or directory (/var/www/test.task/web/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(66): spl_autoload_call()
+#1 unknown(0): LetterController->actionSend()
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=6
+in /var/www/test.task/web/protected/controllers/LetterController.php (66)
+in /var/www/test.task/web/index.php (13)
+2017/03/29 02:00:06 [error] [php] include(AjaxController.php): failed to open stream: No such file or directory (/var/www/test.task/web/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(66): spl_autoload_call()
+#1 unknown(0): LetterController->actionSend()
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=6
+in /var/www/test.task/web/protected/controllers/LetterController.php (66)
+in /var/www/test.task/web/index.php (13)
+2017/03/29 02:13:31 [error] [exception.CException] CException: Property "Letter.id" is not defined. in /var/www/test.task/web/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/test.task/web/framework/db/ar/CActiveRecord.php(145): CComponent->__get('id')
+#1 /var/www/test.task/web/framework/base/CModel.php(596): CActiveRecord->__get('id')
+#2 /var/www/test.task/web/protected/views/letter/view.php(37): CModel->offsetGet('id')
+#3 /var/www/test.task/web/framework/web/CBaseController.php(126): require('/var/www/test.t...')
+#4 /var/www/test.task/web/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/test.t...', Array, true)
+#5 /var/www/test.task/web/framework/web/CController.php(869): CBaseController->renderFile('/var/www/test.t...', Array, true)
+#6 /var/www/test.task/web/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#7 /var/www/test.task/web/protected/controllers/LetterController.php(57): CController->render('view', Array)
+#8 [internal function]: LetterController->actionView('6')
+#9 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#10 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#11 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/view')
+#21 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#22 /var/www/test.task/web/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/index.php?r=letter/view&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/index
+---
+2017/03/29 03:25:28 [error] [php] Undefined variable: _SESSION (/var/www/test.task/web/protected/controllers/AjaxController.php:12)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(286): AjaxController->runAction()
+#1 /var/www/test.task/web/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#2 /var/www/test.task/web/framework/web/CWebApplication.php(282): AjaxController->run()
+#3 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/test.task/web/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=ajax/sendunisender
+in /var/www/test.task/web/protected/controllers/AjaxController.php (12)
+in /var/www/test.task/web/index.php (13)
+2017/03/29 03:39:02 [error] [exception.ParseError] ParseError: syntax error, unexpected ',', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php:52
+Stack trace:
+#0 [internal function]: YiiBase::autoload('NotificationUni...')
+#1 /var/www/test.task/web/protected/controllers/AjaxController.php(13): spl_autoload_call('NotificationUni...')
+#2 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#3 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#7 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#8 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/test.task/web/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 03:39:13 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 03:39:35 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 03:42:34 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 03:46:01 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 03:46:18 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 03:46:24 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 03:46:37 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 03:47:04 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 04:19:38 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderAbstractModel.php:17
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderAbstractModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 04:24:38 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php:11
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 04:31:25 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php:11
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 04:32:49 [error] [exception.Error] Error: Cannot instantiate abstract class NotificationUnisenderModel in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php:11
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderModel::getInstance()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 10:22:26 [error] [exception.Error] Error: Cannot use object of type __PHP_Incomplete_Class as array in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php:48
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(14): NotificationUnisenderModel->setVars(Object(__PHP_Incomplete_Class))
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 10:23:40 [error] [exception.Error] Error: Cannot use object of type __PHP_Incomplete_Class as array in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php:60
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(14): NotificationUnisenderModel->setVars(Object(__PHP_Incomplete_Class))
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 10:42:57 [error] [php] NotificationUnisenderModel::setVars(): The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;Letter&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition  (/var/www/test.task/web/protected/models/NotificationUnisenderModel.php:48)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/test.task/web/framework/web/CController.php(286): AjaxController->runAction()
+#2 /var/www/test.task/web/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#3 /var/www/test.task/web/framework/web/CWebApplication.php(282): AjaxController->run()
+#4 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=ajax/sendunisender
+in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php (48)
+in /var/www/test.task/web/protected/controllers/AjaxController.php (14)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 10:43:49 [error] [php] NotificationUnisenderModel::setVars(): The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;Letter&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition  (/var/www/test.task/web/protected/models/NotificationUnisenderModel.php:48)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/test.task/web/framework/web/CController.php(286): AjaxController->runAction()
+#2 /var/www/test.task/web/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#3 /var/www/test.task/web/framework/web/CWebApplication.php(282): AjaxController->run()
+#4 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=ajax/sendunisender
+in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php (48)
+in /var/www/test.task/web/protected/controllers/AjaxController.php (14)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 11:10:24 [error] [exception.Error] Error: Cannot use object of type __PHP_Incomplete_Class as array in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php:56
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(14): NotificationUnisenderModel->setVars(Object(__PHP_Incomplete_Class))
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(49): AjaxController->actionSendUnisender()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/test.task/web/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('sendunisender')
+#6 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('ajax/sendunisen...')
+#7 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/test.task/web/index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=ajax/sendunisender
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 11:12:54 [error] [php] NotificationUnisenderModel::setVars(): The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;Letter&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition  (/var/www/test.task/web/protected/models/NotificationUnisenderModel.php:49)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/test.task/web/framework/web/CController.php(286): AjaxController->runAction()
+#2 /var/www/test.task/web/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#3 /var/www/test.task/web/framework/web/CWebApplication.php(282): AjaxController->run()
+#4 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=ajax/sendunisender
+in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php (49)
+in /var/www/test.task/web/protected/controllers/AjaxController.php (14)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 11:22:13 [error] [php] Undefined index: model (/var/www/test.task/web/protected/models/NotificationUnisenderModel.php:49)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/test.task/web/framework/web/CController.php(286): AjaxController->runAction()
+#2 /var/www/test.task/web/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#3 /var/www/test.task/web/framework/web/CWebApplication.php(282): AjaxController->run()
+#4 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=ajax/sendunisender
+in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php (49)
+in /var/www/test.task/web/protected/controllers/AjaxController.php (14)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 12:49:46 [error] [php] include(AjaxController.php): failed to open stream: No such file or directory (/var/www/test.task/web/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(234): spl_autoload_call()
+#1 unknown(0): LetterController->actionSend()
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=6
+in /var/www/test.task/web/protected/controllers/LetterController.php (234)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 12:52:04 [error] [php] include(AjaxController.php): failed to open stream: No such file or directory (/var/www/test.task/web/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(234): spl_autoload_call()
+#1 unknown(0): LetterController->actionSend()
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=6
+in /var/www/test.task/web/protected/controllers/LetterController.php (234)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 12:54:07 [error] [php] include(AjaxController.php): failed to open stream: No such file or directory (/var/www/test.task/web/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(235): spl_autoload_call()
+#1 unknown(0): LetterController->actionSend()
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=6
+in /var/www/test.task/web/protected/controllers/LetterController.php (235)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 12:57:54 [error] [php] Missing argument 1 for CController::__construct(), called in /var/www/test.task/web/protected/controllers/LetterController.php on line 237 and defined (/var/www/test.task/web/framework/web/CController.php:110)
+Stack trace:
+#0 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#4 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#7 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#10 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=6
+in /var/www/test.task/web/protected/controllers/LetterController.php (237)
+in /var/www/test.task/web/index.php (15)
+2017/03/29 13:02:01 [error] [exception.Error] Error: Using $this when not in object context in /var/www/test.task/web/protected/controllers/AjaxController.php:23
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/LetterController.php(237): AjaxController::sendLetter()
+#1 [internal function]: LetterController->actionSend('6')
+#2 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#3 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#4 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#14 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/test.task/web/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:02:42 [error] [exception.Error] Error: Access to undeclared static property: AjaxController::$this in /var/www/test.task/web/protected/controllers/LetterController.php:237
+Stack trace:
+#0 [internal function]: LetterController->actionSend('6')
+#1 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#2 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#3 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#13 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/test.task/web/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:03:44 [error] [exception.Error] Error: Access to undeclared static property: AjaxController::$this in /var/www/test.task/web/protected/controllers/LetterController.php:237
+Stack trace:
+#0 [internal function]: LetterController->actionSend('6')
+#1 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#2 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#3 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#13 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/test.task/web/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:07:51 [error] [exception.Error] Error: Call to a member function run() on null in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:13:31 [error] [exception.Error] Error: Call to a member function run() on null in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:15:00 [error] [exception.Error] Error: Call to a member function run() on null in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:16:42 [error] [exception.Error] Error: Call to a member function run() on null in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:18:07 [error] [exception.Error] Error: Call to a member function getResult() on null in /var/www/test.task/web/protected/controllers/AjaxController.php:15
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:18:28 [error] [exception.Error] Error: Call to a member function getResult() on array in /var/www/test.task/web/protected/controllers/AjaxController.php:15
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:18:58 [error] [exception.Error] Error: Call to a member function run() on array in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:21:30 [error] [exception.Error] Error: Call to a member function run() on array in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:22:19 [error] [exception.Error] Error: Call to a member function run() on array in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:29:07 [error] [exception.Error] Error: Call to a member function run() on array in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:29:42 [error] [exception.Error] Error: Call to a member function run() on array in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:30:11 [error] [exception.Error] Error: Call to a member function run() on array in /var/www/test.task/web/protected/controllers/AjaxController.php:14
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('6')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=6
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=6
+---
+2017/03/29 13:42:46 [error] [exception.Error] Error: Call to a member function getResult() on null in /var/www/test.task/web/protected/controllers/AjaxController.php:15
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('5')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=5
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 13:47:49 [error] [php] Trying to get property of non-object (/var/www/test.task/web/protected/models/NotificationUnisenderModel.php:80)
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(13): NotificationUnisenderModel->setVars()
+#1 /var/www/test.task/web/protected/controllers/AjaxController.php(22): actionSendUnisender()
+#2 /var/www/test.task/web/protected/controllers/LetterController.php(236): sendLetter()
+#3 unknown(0): LetterController->actionSend()
+#4 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#8 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#11 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#15 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=5
+in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php (80)
+in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php (40)
+in /var/www/test.task/web/protected/models/NotificationUnisenderModel.php (23)
+2017/03/29 14:01:43 [error] [exception.Error] Error: Using $this when not in object context in /var/www/test.task/web/protected/controllers/AjaxController.php:16
+Stack trace:
+#0 /var/www/test.task/web/protected/controllers/AjaxController.php(22): AjaxController::actionSendUnisender()
+#1 /var/www/test.task/web/protected/controllers/LetterController.php(236): AjaxController::sendLetter()
+#2 [internal function]: LetterController->actionSend('5')
+#3 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(LetterController), Array)
+#4 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(LetterController), Object(ReflectionMethod), Array)
+#5 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/test.task/web/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/test.task/web/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/test.task/web/framework/web/CWebApplication.php(282): CController->run('send')
+#14 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController('letter/send')
+#15 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/test.task/web/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=letter/send&id=5
+HTTP_REFERER=http://test.task/index.php?r=letter/view&id=5
+---
+2017/03/29 14:04:56 [error] [php] Object of class stdClass could not be converted to string (/var/www/test.task/web/protected/controllers/AjaxController.php:16)
+Stack trace:
+#0 unknown(0): LetterController->actionSend()
+#1 /var/www/test.task/web/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#2 /var/www/test.task/web/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /var/www/test.task/web/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/test.task/web/framework/web/filters/CFilterChain.php(133): LetterController->runAction()
+#5 /var/www/test.task/web/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/test.task/web/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /var/www/test.task/web/framework/web/filters/CInlineFilter.php(58): LetterController->filterAccessControl()
+#8 /var/www/test.task/web/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /var/www/test.task/web/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/test.task/web/framework/web/CController.php(265): LetterController->runActionWithFilters()
+#11 /var/www/test.task/web/framework/web/CWebApplication.php(282): LetterController->run()
+#12 /var/www/test.task/web/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/test.task/web/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/test.task/web/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=letter/send&id=5
+in /var/www/test.task/web/protected/controllers/AjaxController.php (16)
+in /var/www/test.task/web/protected/controllers/AjaxController.php (22)
+in /var/www/test.task/web/protected/controllers/LetterController.php (236)
